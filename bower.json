@@ -1,0 +1,12 @@
+{
+  "name": "multiplayer-proto",
+  "description": "",
+  "authors": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {}
+}
