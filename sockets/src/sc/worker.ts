@@ -1,6 +1,8 @@
 import * as fs from "fs-extra";
 import * as _ from "lodash";
 
+import { GamePlayer } from "./game/game";
+
 let scCodecMinBin = require('sc-codec-min-bin');
 let uuid = require('uuid');
 
