@@ -64,3 +64,34 @@ var GamePlayer = function () {
     return GamePlayer;
 }();
 exports.GamePlayer = GamePlayer;
+var Point = function () {
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    return Point;
+}();
+var GObject = function () {
+    function GObject(name) {
+        this.name = name;
+    }
+    return GObject;
+}();
+function Tagged(Base) {
+    return function (_super) {
+        __extends(class_1, _super);
+        function class_1() {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            var _this = _super.apply(this, args) || this;
+            _this._tag = "";
+            return _this;
+        }
+        return class_1;
+    }(Base);
+}
+var TaggedPoint = Tagged(Point);
+var g = new GameBoundedObject();
+console.log(g.position);

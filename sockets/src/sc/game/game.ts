@@ -81,3 +81,43 @@ class GamePlayer {
 }
 
 export { GamePlayer }
+
+
+class Point {
+
+  public x: number;
+  public y: number;
+
+  constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
+
+}
+
+class GObject {
+
+  public name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+}
+
+type Constructor<T> = new (...args: any[]) => T;
+
+function Tagged<T extends Constructor<{}>>(Base: T) {
+  return class extends Base {
+    _tag: string;
+    constructor(...args: any[]) {
+      super(...args);
+      this._tag = "";
+    }
+  }
+}
+
+const TaggedPoint = Tagged(Point);
+
+let g = new GameBoundedObject();
+console.log(g.position);

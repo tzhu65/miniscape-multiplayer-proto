@@ -8,9 +8,9 @@
         "preserveConstEnums": true,
         "target": "es5"
     },
-    // "files": [
-    //   "client/js/main.ts"
-    // ]
+    "files": [
+      "client/js/main.ts"
+    ],
     "typeRoots": [
         "./typings"
     ]
